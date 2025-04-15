@@ -19,7 +19,7 @@ public class Main {
                     "2 - Realizar Depósitos \n" +
                     "3 - Realizar Saques\n" +
                     "4 - Consultar Saldo\n" +
-                    "5 - Consultar histórico de movimentações\n" +
+                    "5 - Consultar Histórico de Movimentações\n" +
                     "6 - Transferir entre Contas\n" +
                     "7 - Sair");
             String option = scanner.nextLine();
