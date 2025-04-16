@@ -29,43 +29,63 @@ public class Main {
             String option = scanner.nextLine();
 
 
-                switch (option) {
-                    case "debug":
-                        System.out.println("===Dev View===");
-                        System.out.println(Bank);
-                        System.out.println(account);
-                        System.out.println("===Dev View===");
-                        break;
-                    case "1":
-                        System.out.println("===Gerenciador Bancário===");
-                        System.out.println("Digite o nome da nova conta:");
-                        String name = scanner.nextLine();
-                        System.out.println("A conta " + name + " foi criada com sucesso!");
-                        account.add(name);
-                        Bank.add(0);
-                        break;
-                    case "2":
-                        System.out.println("===Gerenciador Bancário===");
-                        System.out.println("Digite a posição da conta");
-                        System.out.println(account);
-                        String position = scanner.nextLine();
-                        System.out.println(account);
-                        int positback = Integer.parseInt(position)-1;
-                        System.out.println("Digite a quantia a ser depositada:");
-                        String quant = scanner.nextLine();
-                        int quantback = Integer.parseInt(quant);
-                        System.out.println("Processando...");
-                        Bank.set(positback, quantback);
-                        System.out.println("A quantia de " + quant + " foi depositada ");
-                        System.out.println(account.get(positback)+": "+(quantback));
-                        break;
+            switch (option) {
+                case "debug":
+                    System.out.println("===Dev View===");
+                    System.out.println(Bank);
+                    System.out.println(account);
+                    System.out.println("===Dev View===");
+                    break;
 
+                case "1":
 
+                    System.out.println("===Gerenciador Bancário===");
+                    System.out.println("Digite o nome da nova conta:");
+                    String name = scanner.nextLine();
+                    System.out.println("A conta " + name + " foi criada com sucesso!");
+                    account.add(name);
+                    Bank.add(0);
+                    break;
 
+                case "2":
 
+                    System.out.println("===Gerenciador Bancário===");
+                    System.out.println("Digite a posição da conta");
+                    System.out.println(account);
+                    String position = scanner.nextLine();
+                    System.out.println(account);
+                    int positback = Integer.parseInt(position) - 1;
+                    System.out.println("Digite a quantia a ser depositada:");
+                    String quant = scanner.nextLine();
+                    int quantback = Integer.parseInt(quant);
+                    Bank.set(positback, quantback);
+                    System.out.println("A quantia de " + quant + " foi depositada ");
+                    System.out.println(account.get(positback) + ": " + (quantback));
+                    break;
 
+                case "3":
+
+                    System.out.println("===Gerenciador Bancário===");
+                    System.out.println("Digite a posição da conta");
+                    System.out.println(account);
+                    String position_ = scanner.nextLine();
+                    System.out.println(account);
+                    int positback_ = Integer.parseInt(position_) - 1;
+                    System.out.println("Digite a quantiade a ser sacada:");
+                    String saque = scanner.nextLine();
+                    int saqueback = Integer.parseInt(saque);
+                    int operation = Bank.get(positback_) - saqueback;
+                    Bank.set(positback_, operation);
+                    System.out.println("A quantia de " + saqueback + " foi sacada de sua conta");
+                    System.out.println();
+                    System.out.println(account.get(positback_) + ": " + operation);
+
+                    System.out.println();
+                    break;
 
             }
+
+
         }
     }
 }
