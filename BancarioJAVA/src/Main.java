@@ -77,11 +77,19 @@ public class Main {
                     int operation = Bank.get(positback_) - saqueback;
                     Bank.set(positback_, operation);
                     System.out.println("A quantia de " + saqueback + " foi sacada de sua conta");
-                    System.out.println();
                     System.out.println(account.get(positback_) + ": " + operation);
-
-                    System.out.println();
                     break;
+
+                case "4":
+
+                    System.out.println("===Gerenciador Bancário===");
+                    System.out.println("Digite a posição da conta");
+                    System.out.println(account);
+                    String positions = scanner.nextLine();
+                    int saqback = Integer.parseInt(positions)-1;
+                    System.out.println("Saldo disponível:");
+                    System.out.println(Bank.get(saqback));
+
 
             }
 
